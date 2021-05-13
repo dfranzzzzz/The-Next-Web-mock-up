@@ -70,6 +70,7 @@ header {
 }
 #headline_2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(./medias/front_page_img_02.jpg);
+  text-align: center;
 }
 #headline_3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(./medias/front_page_img_03.jfif);
