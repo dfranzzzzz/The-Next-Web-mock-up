@@ -49,6 +49,7 @@ section:nth-of-type(odd) { background: var(--primary_bg_color);}
 }
 
 .pic_text { color: var(--img_text_color);}
+button, i, img, .img_bg, .channel { cursor: pointer;}
 /* --------------------------- */
 /* NAV BAR */
 /* --------------------------- */
@@ -83,7 +84,7 @@ nav a:hover {
 @media (min-width: 600px) {
   nav .fa-bars { display: none;}
   nav img { height: 20px;}
-  .fa-envelope { margin-left: calc(82.5px - 16px);}
+  nav .fa-envelope { margin-left: calc(82.5px - 16px);}
 }
 
 @media (max-width: 600px) {
@@ -352,7 +353,214 @@ header img {
 /* --------------------------- */
 /* NEWSLETTER SECTION */
 /* --------------------------- */
+.newsletter_section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: var(--img_text_color);
 
+  padding-block: 40px;
+  min-height: 300px;
+}
 
+section:nth-of-type(5) {
+  width: 100%;
+  background-image: url(./medias/front_page_img_02.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
 
+.newsletter_section ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
+.newsletter_section li {
+  padding-inline: 10px ;
+}
+
+.newsletter_section p {
+  max-width: 500px;
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+.newsletter_section h1 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.newsletter_section i {
+  color: lightgray;
+  font-size: 25px;
+}
+
+.newsletter_section input {
+  height: 40px;
+  min-width: 300px;
+  width: 40%;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding-inline: 10px;
+  margin-bottom: 10px;
+}
+
+/* --------------------------- */
+/* VIDEOS SECTION */
+/* --------------------------- */
+.videos_section {
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videos_section .container {
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.videos_section iframe {
+  width: 100vw; 
+  height: 56.25vw;
+}
+
+.videos_section .container .columns2 {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  padding-left: 20px;
+}
+
+.videos_section img {
+  width: 100%;
+  min-height: 100px;
+  object-fit: cover;
+}
+
+.videos_section p {
+  margin: 0 0 5px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@media (max-width: 900px) {
+  .videos_section .container {
+    flex-direction: column;
+  }
+
+  .videos_section iframe,
+  .videos_section .container .columns2 {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+
+  .videos_section .container .columns2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------- */
+/* VIDEOS SECTION */
+/* --------------------------- */
+.work_section {
+  padding: 50px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work_section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work_section .container > div {
+  width: 48%;
+}
+
+.work_section img {
+  width: 100px;
+  padding: 10px
+}
+
+.work_section .columns2 > div {
+  display: flex;
+  align-items: center;
+}
+
+.work_section .columns2  {
+  padding-block: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.work_section h5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--secondary_text_color);
+}
+
+.work_section h1 {
+  margin: 0
+}
+
+.work_section h4 {
+  margin: 0;
+}
+
+.work_section p {
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.work_section button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-block: 15px;
+
+  color: var(--img_text_color);
+  background: var(--accent_text_color1);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .work_section .columns2 > div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .work_section .container {
+    flex-direction: column;
+  }
+
+  .work_section .container > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .work_section .columns2 {
+    justify-content: center;
+    column-gap: 40%;
+  }
+
+}
